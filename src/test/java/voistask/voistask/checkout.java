@@ -3,6 +3,7 @@ package voistask.voistask;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -37,10 +38,10 @@ public class checkout {
 	    driver.findElement(By.xpath("//button[@name='processCarrier']")).click();
 	    driver.findElement(By.xpath("//a[@title='Pay by bank wire']")).click();
 	    driver.findElement(By.xpath("//i[@class='icon-chevron-right right']")).click();
-	    List <WebElement> box = driver.findElements(By.id("cart_navigation"));
-	    box.get(1).click();
-		
+	 
+	  new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='button btn btn-default button-medium'"))).click();
 
+	   
 	}
 
 }
