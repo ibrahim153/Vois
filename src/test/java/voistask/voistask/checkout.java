@@ -25,7 +25,7 @@ public class checkout {
 		 driver.findElement(By.linkText("Women")).click();
 	 
 	     driver.findElement(By.linkText("Blouse")).click();
-	     driver.findElement(By.xpath("//p[@id='add_to_cart']")).click();
+	     driver.findElement(By.xpath("//p[@id='add_to_cart']")).click();  
         // driver.switchTo().alert().accept();
 	     Thread.sleep(3000);
 	    driver.findElement(By.linkText("Proceed to checkout")).click();
