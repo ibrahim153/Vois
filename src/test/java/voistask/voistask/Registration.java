@@ -24,10 +24,10 @@ public class Registration {
 		driver.manage().window().maximize();
 		driver.get("http://automationpractice.com/index.php");
 		driver.findElement(By.linkText("Sign in")).click();
-		driver.findElement(By.xpath("//input[@name='email_create']")).sendKeys("ibrahiaad4040@yahoo.com");
+		driver.findElement(By.xpath("//input[@name='email_create']")).sendKeys("ibra@yahoo.com");
 		driver.findElement(By.id("SubmitCreate")).click();
 		 
-		WebDriverWait wait = new WebDriverWait (driver, 25);
+		WebDriverWait wait = new WebDriverWait (driver, 30);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='id_gender']")));
 	    element.click();
 		
@@ -35,7 +35,7 @@ public class Registration {
 		driver.findElement(By.xpath("//*[@name='customer_lastname']")).sendKeys("saad");
 		WebElement alo =driver.findElement(By.id("email"));
 		alo.clear();
-		alo.sendKeys("ibrahiaad4040@yahoo.com");
+		alo.sendKeys("ibra@yahoo.com");
 		
 		
 		driver.findElement(By.id("passwd")).sendKeys("hima12345");
